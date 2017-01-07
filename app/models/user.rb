@@ -1,5 +1,15 @@
 class User < ApplicationRecord
   devise :trackable, :omniauthable, omniauth_providers: %i(google)
+  before_create :generate_uuid
+
+  def generate_uuid
+    random_code = nil
+    loop do
+      random_code = SecureRandom.urlsafe_base64(40, false)
+      break unless User.where(uuid: random_code).exists?
+    end
+    self.uuid = random_code
+  end
 
   protected
 
