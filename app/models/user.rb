@@ -18,6 +18,7 @@ class User < ApplicationRecord
 
     if user.new_record?
       user = User.create(
+        email:    auth.info.email,
         name:     auth.info.name,
         provider: auth.provider,
         uid:      auth.uid,
