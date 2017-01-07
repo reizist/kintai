@@ -1,0 +1,10 @@
+table
+  tr
+  td ステータス
+  td 勤務時間
+  - @records.each do |r|
+    tr
+      td= r.status
+      td= r.duration
+
+
