@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admin_users
   get 'home/index'
 
   devise_for :users, controllers: {
@@ -12,5 +13,10 @@ Rails.application.routes.draw do
         post "/" , :action => "record"
       end
     end
+  end
+
+  namespace :admin do
+    get '/' => 'admin#index'
+    resources :attendances, only: :index
   end
 end
