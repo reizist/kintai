@@ -1,0 +1,26 @@
+.panel.panel-primary
+  .panel-heading
+    h3
+      | 今日の勤務状況
+
+  .panel.panel-default
+    .panel-heading
+      table.table
+        thead
+          tr
+            th ステータス
+            th 勤務時間
+            th 登録日時
+            th 合計勤務時間
+          - @records.each do |r|
+            tr
+              td= r.status
+              td= r.duration
+              td= r.created_at
+              td=
+          tr
+            td
+            td
+            td
+            td= @records.sum(&:duration)
+

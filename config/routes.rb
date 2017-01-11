@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get  'logout' => 'devise/sessions#destroy', as: :destroy_admin_user_session
   end
   root 'home#index'
+  get 'home/dashboard'
 
   devise_for :users, skip: [:sessions], controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks'
@@ -28,5 +29,11 @@ Rails.application.routes.draw do
   namespace :admin do
     get '/' => 'admin#index'
     resources :attendances, only: :index
+  end
+
+  resources :attendances, only: :index do
+    collection do
+      post :record
+    end
   end
 end
