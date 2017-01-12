@@ -1256,7 +1256,7 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-loader-utils@^0.2.11:
+loader-utils@^0.2.11, loader-utils@^0.2.6:
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.16.tgz#f08632066ed8282835dff88dfb52704765adee6d"
   dependencies:
@@ -1720,6 +1720,10 @@ riot-cli@^3.0.0:
     rollup "^0.36.3"
     shelljs "^0.7.5"
 
+riot-compiler@^2.3.22:
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/riot-compiler/-/riot-compiler-2.5.7.tgz#dc418366f1178d39c6c18fd9fc0190cbeecc1695"
+
 riot-compiler@^3.0.0, riot-compiler@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/riot-compiler/-/riot-compiler-3.1.1.tgz#f456934bb863231b21807fa185a5a9edaf062008"
@@ -1742,6 +1746,13 @@ riot@^3.0.7:
     riot-tmpl "^3.0.1"
     simple-dom "0.3.2"
     simple-html-tokenizer "^0.2.6"
+
+riotjs-loader@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/riotjs-loader/-/riotjs-loader-3.0.0.tgz#51f640d7e3ac32cfa106fa240dac26077fa43b3c"
+  dependencies:
+    loader-utils "^0.2.6"
+    riot-compiler "^2.3.22"
 
 ripemd160@0.2.0:
   version "0.2.0"
