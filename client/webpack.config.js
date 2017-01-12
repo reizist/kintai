@@ -18,6 +18,9 @@ module.exports = {
             {
                 test: /\.tag$/,
                 loader: 'tag',
+                query: {
+                    template: 'jade'
+                },
                 exclude: /node_modules/,
             },
         ],

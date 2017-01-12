@@ -1,5 +1,6 @@
-<now>
-    <h3>{ time }</h3>
+now
+    h3 { time }
+    script.
        var self = this
 
        this.tick = function () {
@@ -46,4 +47,3 @@
 
            return y + "年" + m + "月" + d + "日(" + wNames[w] + ") " + h + ":" + min + ":" + s
        }
-</now>
